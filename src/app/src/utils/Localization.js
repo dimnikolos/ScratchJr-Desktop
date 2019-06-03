@@ -23,7 +23,7 @@ require('intl/locale-data/jsonp/es.js');
 require('intl/locale-data/jsonp/fr.js');
 require('intl/locale-data/jsonp/it.js');
 require('intl/locale-data/jsonp/nl.js');
-require('intl/locale-data/jsonp/ja.js');
+require('intl/locale-data/jsonp/el.js');
 require('intl/locale-data/jsonp/pt.js');
 require('intl/locale-data/jsonp/sv.js');
 require('intl/locale-data/jsonp/th.js');
@@ -39,7 +39,7 @@ require('intl-messageformat/dist/locale-data/es');
 require('intl-messageformat/dist/locale-data/fr');
 require('intl-messageformat/dist/locale-data/it');
 require('intl-messageformat/dist/locale-data/nl');
-require('intl-messageformat/dist/locale-data/ja');
+require('intl-messageformat/dist/locale-data/el');
 require('intl-messageformat/dist/locale-data/pt');
 require('intl-messageformat/dist/locale-data/sv');
 require('intl-messageformat/dist/locale-data/th');
@@ -112,6 +112,7 @@ export default class Localization {
         IO.requestFromServer(localizationRoot + 'localizations/' + topLevel + '.json', (result) => {
             localizationMessages = JSON.parse(result);
             whenDone();
+            debugLog(topLevel)
         });
     }
 
